@@ -1,0 +1,43 @@
+.navbar
+{
+    border-radius: 0px;
+}
+
+body
+{
+    background: #BBB;
+}
+
+#choice_home, #choice_field, #choice_flat, #choice_ecoIndicating
+{
+    display: none;
+}
+
+div.energy
+{
+    height: 30px;
+    text-align: left;
+    color: #FFF;
+    text-shadow: 0px 0px 5px black;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0px 10px;
+}
+
+input.energy
+{
+    width: 100%
+}
+
+span.required
+{
+    color:red;
+    font-weight: bold;
+    font-size: 5px;
+    vertical-align: super;
+}
+
+textarea
+{
+  width: 100%;
+}
