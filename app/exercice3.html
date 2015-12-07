@@ -61,480 +61,479 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <h1 class="panel-title">Formulaire de vente d'un bien immobilier</h1>
-                        </div>
-                        <div class="panel-body">
-                            <p>
-                                Veuillez remplir tous les champs obligatoire (<span class="required glyphicon glyphicon-asterisk"></span>) s'il vous plait. Plus l'annonce sera complête et précise, plus des gens visiteront votre maison. (Encore faut-il qu'elle ne soit pas hantée).
-                            </p>
-                            <form>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h1 class="panel-title">Formulaire de vente d'un bien immobilier</h1>
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            Veuillez remplir tous les champs obligatoire (<span class="required glyphicon glyphicon-asterisk"></span>) s'il vous plait. Plus l'annonce sera complête et précise, plus des gens visiteront votre maison. (Encore faut-il qu'elle ne soit pas hantée).
+                        </p>
+                        <form>
 
-                                <fieldset>
-                                    <legend>Information de base</legend>
-                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                        <div class="form-group">
-                                            <label for="myForm_label_title">Titre de l'annonce <span class="required glyphicon glyphicon-asterisk"></span></label>
-                                            <input type="text" class="form-control" id="myForm_label_title" placeholder="Titre de l'annonce" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                        <div class="form-group">
-                                            <label for="myForm_label_price">Prix <span class="required glyphicon glyphicon-asterisk"></span></label>
-                                            <div class="input-group">
-                                                <input type="number" class="form-control" id="myForm_label_price" required min="1">
-                                                <div class="input-group-addon">€</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                        <div class="form-group">
-                                            <label for="myForm_label_date">Date de disponibilité <span class="required glyphicon glyphicon-asterisk"></span></label>
-                                            <input type="date" class="form-control" id="myForm_label_date" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                        <div class="form-group">
-                                            <label for="myForm_label_email">Votre adresse électronique <span class="required glyphicon glyphicon-asterisk"></span></label>
-                                            <input type="email" class="form-control" id="myForm_label_email" required autocomplete="email">
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                        <div class="form-group">
-                                            <label for="myForm_label_tel">Votre téléphone <span class="required glyphicon glyphicon-asterisk"></span></label>
-                                            <input type="tel" class="form-control" id="myForm_label_tel" required autocomplete="tel">
-                                        </div>
-                                    </div>
-                                </fieldset>
-
-                                <fieldset>
-                                    <legend>Information du bien</legend>
-                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                        <div class="form-group">
-                                            <label for="myForm_label_type">Type de bien <span class="required glyphicon glyphicon-asterisk"></span></label>
-                                            <select class="form-control" id="myForm_label_type" required>
-                                                <option>Faire un choix</option>
-                                                <option value="field" data-div="choice_field">Terrain</option>
-                                                <optgroup label="Maison">
-                                                    <option value="home_rent" data-div="choice_home,choice_ecoIndicating">Maison : Location</option>
-                                                    <option value="home_sell" data-div="choice_home,choice_ecoIndicating">Maison : Vente</option>
-                                                </optgroup>
-                                                <optgroup label="Appartement">
-                                                    <option value="flat_rent" data-div="choice_flat,choice_ecoIndicating">Appartement : Location</option>
-                                                    <option value="flat_sell" data-div="choice_flat,choice_ecoIndicating">Appartement : Vente</option>
-                                                </optgroup>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div id="choice_home" class="choice-adding">
-                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                            <div class="form-group">
-                                                <label for="myForm_label_home_inArea">Surface de la maison <span class="required glyphicon glyphicon-asterisk"></span></label>
-                                                <div class="input-group">
-                                                    <input type="number" class="form-control" id="myForm_label_home_inArea" required min="1">
-                                                    <div class="input-group-addon">m<sup>2</sup></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                            <div class="form-group">
-                                                <label for="myForm_label_home_outArea">Surface du terrain <span class="required glyphicon glyphicon-asterisk"></span></label>
-                                                <div class="input-group">
-                                                    <input type="number" class="form-control" id="myForm_label_home_outArea" required min="0">
-                                                    <div class="input-group-addon">m<sup>2</sup></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                            <div class="form-group">
-                                                <label for="myForm_label_room">Nombre de pièces <span class="required glyphicon glyphicon-asterisk"></span></label>
-                                                <div class="input-group">
-                                                    <input type="number" class="form-control" id="myForm_label_room" required min="1">
-                                                    <div class="input-group-addon">m<sup>2</sup></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                            <div class="form-group">
-                                                <label for="myForm_label_home_bathroom">Dont salle de bain <span class="required glyphicon glyphicon-asterisk"></span></label>
-                                                <div class="input-group">
-                                                    <input type="number" class="form-control" id="myForm_label_home_bathroom" required min="0">
-                                                    <div class="input-group-addon">m<sup>2</sup></div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                            <h3>Avantages</h3>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox"> Jacuzzi
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox"> Piscine
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox"> Garage
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox"> Cave
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox"> Parking
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox"> Habitat écolo
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox"> Cheminée/Poêle
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox"> 2<sup>nd</sup> habitat
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div id="choice_field" class="choice-adding">
-                                      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                          <div class="form-group">
-                                              <label for="myForm_label_field_area">Surface <span class="required glyphicon glyphicon-asterisk"></span></label>
-                                              <div class="input-group">
-                                                  <input type="number" class="form-control" id="myForm_label_field_area" required min="1">
-                                                  <div class="input-group-addon">m<sup>2</sup></div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                          <div class="form-group">
-                                              <label for="myForm_label_field_inArea">Surface de batiments <span class="required glyphicon glyphicon-asterisk"></span></label>
-                                              <div class="input-group">
-                                                  <input type="number" class="form-control" id="myForm_label_field_inArea" required min="0">
-                                                  <div class="input-group-addon">m<sup>2</sup></div>
-                                              </div>
-                                          </div>
-                                      </div>
-
-                                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                          <h3>Avantages</h3>
-                                      </div>
-                                      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                                          <div class="checkbox">
-                                              <label>
-                                                  <input type="checkbox"> Raccord. élec.
-                                              </label>
-                                          </div>
-                                      </div>
-                                      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                                          <div class="checkbox">
-                                              <label>
-                                                  <input type="checkbox"> Raccord. eau
-                                              </label>
-                                          </div>
-                                      </div>
-                                      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                                          <div class="checkbox">
-                                              <label>
-                                                  <input type="checkbox"> Raccord. tél.
-                                              </label>
-                                          </div>
-                                      </div>
-                                      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                                          <div class="checkbox">
-                                              <label>
-                                                  <input type="checkbox"> Tout à l'égout
-                                              </label>
-                                          </div>
-                                      </div>
-                                      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                                          <div class="checkbox">
-                                              <label>
-                                                  <input type="checkbox"> Constructible
-                                              </label>
-                                          </div>
-                                      </div>
-                                      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                                          <div class="checkbox">
-                                              <label>
-                                                  <input type="checkbox"> Viabilisé
-                                              </label>
-                                          </div>
-                                      </div>
-                                      <div class="hidden-xs hidden-sm hidden-md col-lg-6" style="line-height: 50px;">&nbsp;</div>
-                                    </div>
-
-
-                                    <div id="choice_flat" class="choice-adding">
-
-                                          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                              <div class="form-group">
-                                                  <label for="myForm_label_flat_inArea">Surface de l'appartement <span class="required glyphicon glyphicon-asterisk"></span></label>
-                                                  <div class="input-group">
-                                                      <input type="number" class="form-control" id="myForm_label_flat_inArea" required min="1">
-                                                      <div class="input-group-addon">m<sup>2</sup></div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                              <div class="form-group">
-                                                  <label for="myForm_label_flat_outArea">Surface des balcons <span class="required glyphicon glyphicon-asterisk"></span></label>
-                                                  <div class="input-group">
-                                                      <input type="number" class="form-control" id="myForm_label_flat_outArea" required min="0">
-                                                      <div class="input-group-addon">m<sup>2</sup></div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                              <div class="form-group">
-                                                  <label for="myForm_label_flat_funArea">Surface de cour <span class="required glyphicon glyphicon-asterisk"></span></label>
-                                                  <div class="input-group">
-                                                      <input type="number" class="form-control" id="myForm_label_flat_funArea" required min="0">
-                                                      <div class="input-group-addon">m<sup>2</sup></div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                              <div class="form-group">
-                                                  <label for="myForm_label_flat_level">Étage <span class="required glyphicon glyphicon-asterisk"></span></label>
-                                                  <div class="input-group">
-                                                      <input type="number" class="form-control" id="myForm_label_flat_level" required min="0">
-                                                      <div class="input-group-addon">m<sup>2</sup></div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                              <div class="form-group">
-                                                  <label for="myForm_label_flat_room">Nombre de pièces <span class="required glyphicon glyphicon-asterisk"></span></label>
-                                                  <div class="input-group">
-                                                      <input type="number" class="form-control" id="myForm_label_flat_room" required min="1">
-                                                      <div class="input-group-addon">m<sup>2</sup></div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                              <div class="form-group">
-                                                  <label for="myForm_label_flat_bathroom">Dont salle de bain <span class="required glyphicon glyphicon-asterisk"></span></label>
-                                                  <div class="input-group">
-                                                      <input type="number" class="form-control" id="myForm_label_flat_bathroom" required min="0">
-                                                      <div class="input-group-addon">m<sup>2</sup></div>
-                                                  </div>
-                                              </div>
-                                          </div>
-
-                                          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                              <h3>Avantages</h3>
-                                          </div>
-                                          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                                              <div class="checkbox">
-                                                  <label>
-                                                      <input type="checkbox"> Jacuzzi
-                                                  </label>
-                                              </div>
-                                          </div>
-                                          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                                              <div class="checkbox">
-                                                  <label>
-                                                      <input type="checkbox"> Garage
-                                                  </label>
-                                              </div>
-                                          </div>
-                                          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                                              <div class="checkbox">
-                                                  <label>
-                                                      <input type="checkbox"> Cave
-                                                  </label>
-                                              </div>
-                                          </div>
-                                          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                                              <div class="checkbox">
-                                                  <label>
-                                                      <input type="checkbox"> Parking privé
-                                                  </label>
-                                              </div>
-                                          </div>
-                                          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                                              <div class="checkbox">
-                                                  <label>
-                                                      <input type="checkbox"> Habitat écolo
-                                                  </label>
-                                              </div>
-                                          </div>
-                                          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                                              <div class="checkbox">
-                                                  <label>
-                                                      <input type="checkbox"> Cheminée/Poêle
-                                                  </label>
-                                              </div>
-                                          </div>
-                                          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                                              <div class="checkbox">
-                                                  <label>
-                                                      <input type="checkbox"> Duplex
-                                                  </label>
-                                              </div>
-                                          </div>
-                                          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                                              <div class="checkbox">
-                                                  <label>
-                                                      <input type="checkbox"> Sous les toits
-                                                  </label>
-                                              </div>
-                                          </div>
-                                    </div>
-                                </fieldset>
-
-                                <fieldset id="choice_ecoIndicating" class="choice-adding">
-                                    <legend>Diagnostic de performances énergétiques</legend>
-
-                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                            <div class="energy" style="background:#339A33;width:40%">
-                                                <span style="float:right">A</span>
-                                                <= 50
-                                            </div>
-                                            <div class="energy" style="background:#33CC33;width:50%">
-                                                <span style="float:right">B</span>
-                                                51 à 90
-                                            </div>
-                                            <div class="energy" style="background:#CCFF33;width:60%">
-                                                <span style="float:right">C</span>
-                                                91 à 150
-                                            </div>
-                                            <div class="energy" style="background:#FFFF00;width:70%">
-                                                <span style="float:right">D</span>
-                                                151 à 230
-                                            </div>
-                                            <div class="energy" style="background:#FFCC00;width:80%">
-                                                <span style="float:right">E</span>
-                                                231 à 330
-                                            </div>
-                                            <div class="energy" style="background:#FF9A33;width:90%">
-                                                <span style="float:right">F</span>
-                                                331 à 450
-                                            </div>
-                                            <div class="energy" style="background:#FF0000;width:100%">
-                                                <span style="float:right">G</span>
-                                                <= 451
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                            <div class="form-group">
-                                                <label for="myForm_label_dpe">Étiquette énergie : Diag. Perf. Énerg. <span class="required glyphicon glyphicon-asterisk"></span></label>
-                                                <div class="input-group">
-                                                    <div class="input-group-addon">DPE</div>
-                                                    <input type="number" class="form-control" id="myForm_label_dpe" required min="0">
-                                                    <div class="input-group-addon">kWh<inf>EP</inf>/m<sup>2</sup>.an</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                            <div class="energy" style="background:#F6EDFD;width:40%">
-                                                <span style="float:right">A</span>
-                                                <= 5
-                                            </div>
-                                            <div class="energy" style="background:#E1C2F8;width:50%">
-                                                <span style="float:right">B</span>
-                                                6 à 10
-                                            </div>
-                                            <div class="energy" style="background:#D4A9F5;width:60%">
-                                                <span style="float:right">C</span>
-                                                11 à 20
-                                            </div>
-                                            <div class="energy" style="background:#CB95F3;width:70%">
-                                                <span style="float:right">D</span>
-                                                21 à 35
-                                            </div>
-                                            <div class="energy" style="background:#BA72EF;width:80%">
-                                                <span style="float:right">E</span>
-                                                36 à 55
-                                            </div>
-                                            <div class="energy" style="background:#A74DEB;width:90%">
-                                                <span style="float:right">F</span>
-                                                56 à 80
-                                            </div>
-                                            <div class="energy" style="background:#8A19DF;width:100%">
-                                                <span style="float:right">G</span>
-                                                <= 81
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                            <div class="form-group">
-                                                <label for="myForm_label_ges">Étiquette climat : Gaz à effet de serre</label>
-                                                <div class="input-group">
-                                                    <div class="input-group-addon">GES</div>
-                                                    <input type="number" class="form-control" id="myForm_label_ges" min="0">
-                                                    <div class="input-group-addon">kg<inf>C02</inf>/m<sup>2</sup>.an</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-                                        <a target="_blank" href="http://www.developpement-durable.gouv.fr/-Diagnostic-de-Performance,855-.html">
-                                            Plus d'information à propos du diagnostic de performances énergétiques sur Gouv.fr
-                                        </a>
-                                    </div>
-                                </fieldset>
-
-                                <fieldset>
-                                    <legend>Photos</legend>
-                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                        <input type="file" dropzone multiple>
-                                    </div>
-                                    <div id="myForm_photosArea" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    </div>
-                                </fieldset>
-
-                                <fieldset>
-                                    <legend>Description</legend>
-                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                        <textarea rows="10">
-
-      Pourquoi votre bien est exceptionnel ?
-                                        </textarea>
-                                    </div>
-                                </fieldset>
+                            <fieldset>
+                                <legend>Information de base</legend>
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <button type="submit" class="btn btn-primary">Valider mon annonce</button>
+                                    <div class="form-group">
+                                        <label for="myForm_input_title">Titre de l'annonce <span class="required glyphicon glyphicon-asterisk"></span></label>
+                                        <input type="text" class="form-control" id="myForm_input_title" placeholder="Titre de l'annonce" required>
+                                    </div>
                                 </div>
-                            </form>
-                        </div>
+                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label for="myForm_input_price">Prix <span class="required glyphicon glyphicon-asterisk"></span></label>
+                                        <div class="input-group">
+                                            <input type="number" class="form-control" id="myForm_input_price" required min="1">
+                                            <div class="input-group-addon">€</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label for="myForm_input_date">Date de disponibilité <span class="required glyphicon glyphicon-asterisk"></span></label>
+                                        <input type="date" class="form-control" id="myForm_input_date" required placeholder="AA-MM-JJ">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label for="myForm_input_email">Votre adresse électronique <span class="required glyphicon glyphicon-asterisk"></span></label>
+                                        <input type="email" class="form-control" id="myForm_input_email" required autocomplete="email">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label for="myForm_input_tel">Votre téléphone <span class="required glyphicon glyphicon-asterisk"></span></label>
+                                        <input type="tel" class="form-control" id="myForm_input_tel" required autocomplete="tel">
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <fieldset>
+                                <legend>Information du bien</legend>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="form-group">
+                                        <label for="myForm_input_type">Type de bien <span class="required glyphicon glyphicon-asterisk"></span></label>
+                                        <select class="form-control" id="myForm_input_type" required pattern="Field|Home Selling|Home Renting|Flat Selling|Flat Renting">
+                                            <option>Faire un choix</option>
+                                            <option value="Field" data-div="choice_field">Terrain</option>
+                                            <optgroup label="Maison">
+                                                <option value="Home Renting" data-div="choice_home,choice_ecoIndicating">Maison : Location</option>
+                                                <option value="Home Selling" data-div="choice_home,choice_ecoIndicating">Maison : Vente</option>
+                                            </optgroup>
+                                            <optgroup label="Appartement">
+                                                <option value="Flat Renting" data-div="choice_flat,choice_ecoIndicating">Appartement : Location</option>
+                                                <option value="Flat Selling" data-div="choice_flat,choice_ecoIndicating">Appartement : Vente</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div id="choice_home" class="choice-adding">
+                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                        <div class="form-group">
+                                            <label for="myForm_input_home_inArea">Surface de la maison <span class="required glyphicon glyphicon-asterisk"></span></label>
+                                            <div class="input-group">
+                                                <input type="number" class="form-control" id="myForm_input_home_inArea" required min="1">
+                                                <div class="input-group-addon">m<sup>2</sup></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                        <div class="form-group">
+                                            <label for="myForm_input_home_outArea">Surface du terrain <span class="required glyphicon glyphicon-asterisk"></span></label>
+                                            <div class="input-group">
+                                                <input type="number" class="form-control" id="myForm_input_home_outArea" required min="0">
+                                                <div class="input-group-addon">m<sup>2</sup></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                        <div class="form-group">
+                                            <label for="myForm_input_room">Nombre de pièces <span class="required glyphicon glyphicon-asterisk"></span></label>
+                                            <div class="input-group">
+                                                <input type="number" class="form-control" id="myForm_input_room" required min="1">
+                                                <div class="input-group-addon">m<sup>2</sup></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                        <div class="form-group">
+                                            <label for="myForm_input_home_bathroom">Dont salle de bain <span class="required glyphicon glyphicon-asterisk"></span></label>
+                                            <div class="input-group">
+                                                <input type="number" class="form-control" id="myForm_input_home_bathroom" required min="0">
+                                                <div class="input-group-addon">m<sup>2</sup></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                        <h3>Avantages</h3>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox"> Jacuzzi
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox"> Piscine
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox"> Garage
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox"> Cave
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox"> Parking
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox"> Habitat écolo
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox"> Cheminée/Poêle
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox"> 2<sup>nd</sup> habitat
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="choice_field" class="choice-adding">
+                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                        <div class="form-group">
+                                            <label for="myForm_input_field_area">Surface <span class="required glyphicon glyphicon-asterisk"></span></label>
+                                            <div class="input-group">
+                                                <input type="number" class="form-control" id="myForm_input_field_area" required min="1">
+                                                <div class="input-group-addon">m<sup>2</sup></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                        <div class="form-group">
+                                            <label for="myForm_input_field_inArea">Surface de batiments <span class="required glyphicon glyphicon-asterisk"></span></label>
+                                            <div class="input-group">
+                                                <input type="number" class="form-control" id="myForm_input_field_inArea" required min="0">
+                                                <div class="input-group-addon">m<sup>2</sup></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                        <h3>Avantages</h3>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox"> Raccord. élec.
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox"> Raccord. eau
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox"> Raccord. tél.
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox"> Tout à l'égout
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox"> Constructible
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox"> Viabilisé
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="hidden-xs hidden-sm hidden-md col-lg-6" style="line-height: 50px;">&nbsp;</div>
+                                </div>
+
+
+                                <div id="choice_flat" class="choice-adding">
+
+                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                        <div class="form-group">
+                                            <label for="myForm_input_flat_inArea">Surface de l'appartement <span class="required glyphicon glyphicon-asterisk"></span></label>
+                                            <div class="input-group">
+                                                <input type="number" class="form-control" id="myForm_input_flat_inArea" required min="1">
+                                                <div class="input-group-addon">m<sup>2</sup></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                        <div class="form-group">
+                                            <label for="myForm_input_flat_outArea">Surface des balcons <span class="required glyphicon glyphicon-asterisk"></span></label>
+                                            <div class="input-group">
+                                                <input type="number" class="form-control" id="myForm_input_flat_outArea" required min="0">
+                                                <div class="input-group-addon">m<sup>2</sup></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                        <div class="form-group">
+                                            <label for="myForm_input_flat_funArea">Surface de cour <span class="required glyphicon glyphicon-asterisk"></span></label>
+                                            <div class="input-group">
+                                                <input type="number" class="form-control" id="myForm_input_flat_funArea" required min="0">
+                                                <div class="input-group-addon">m<sup>2</sup></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                        <div class="form-group">
+                                            <label for="myForm_input_flat_level">Étage <span class="required glyphicon glyphicon-asterisk"></span></label>
+                                            <div class="input-group">
+                                                <input type="number" class="form-control" id="myForm_input_flat_level" required min="0">
+                                                <div class="input-group-addon">m<sup>2</sup></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                        <div class="form-group">
+                                            <label for="myForm_input_flat_room">Nombre de pièces <span class="required glyphicon glyphicon-asterisk"></span></label>
+                                            <div class="input-group">
+                                                <input type="number" class="form-control" id="myForm_input_flat_room" required min="1">
+                                                <div class="input-group-addon">m<sup>2</sup></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                        <div class="form-group">
+                                            <label for="myForm_input_flat_bathroom">Dont salle de bain <span class="required glyphicon glyphicon-asterisk"></span></label>
+                                            <div class="input-group">
+                                                <input type="number" class="form-control" id="myForm_input_flat_bathroom" required min="0">
+                                                <div class="input-group-addon">m<sup>2</sup></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                        <h3>Avantages</h3>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox"> Jacuzzi
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox"> Garage
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox"> Cave
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox"> Parking privé
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox"> Habitat écolo
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox"> Cheminée/Poêle
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox"> Duplex
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox"> Sous les toits
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <fieldset id="choice_ecoIndicating" class="choice-adding">
+                                <legend>Diagnostic de performances énergétiques</legend>
+
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="energy" style="background:#339A33;width:40%">
+                                            <span style="float:right">A</span>
+                                            <= 50
+                                        </div>
+                                        <div class="energy" style="background:#33CC33;width:50%">
+                                            <span style="float:right">B</span>
+                                            51 à 90
+                                        </div>
+                                        <div class="energy" style="background:#CCFF33;width:60%">
+                                            <span style="float:right">C</span>
+                                            91 à 150
+                                        </div>
+                                        <div class="energy" style="background:#FFFF00;width:70%">
+                                            <span style="float:right">D</span>
+                                            151 à 230
+                                        </div>
+                                        <div class="energy" style="background:#FFCC00;width:80%">
+                                            <span style="float:right">E</span>
+                                            231 à 330
+                                        </div>
+                                        <div class="energy" style="background:#FF9A33;width:90%">
+                                            <span style="float:right">F</span>
+                                            331 à 450
+                                        </div>
+                                        <div class="energy" style="background:#FF0000;width:100%">
+                                            <span style="float:right">G</span>
+                                            <= 451
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <label for="myForm_input_dpe">Étiquette énergie : Diag. Perf. Énerg. <span class="required glyphicon glyphicon-asterisk"></span></label>
+                                            <div class="input-group">
+                                                <div class="input-group-addon">DPE</div>
+                                                <input type="number" class="form-control" id="myForm_input_dpe" required min="0">
+                                                <div class="input-group-addon">kWh<inf>EP</inf>/m<sup>2</sup>.an</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="energy" style="background:#F6EDFD;width:40%">
+                                            <span style="float:right">A</span>
+                                            <= 5
+                                        </div>
+                                        <div class="energy" style="background:#E1C2F8;width:50%">
+                                            <span style="float:right">B</span>
+                                            6 à 10
+                                        </div>
+                                        <div class="energy" style="background:#D4A9F5;width:60%">
+                                            <span style="float:right">C</span>
+                                            11 à 20
+                                        </div>
+                                        <div class="energy" style="background:#CB95F3;width:70%">
+                                            <span style="float:right">D</span>
+                                            21 à 35
+                                        </div>
+                                        <div class="energy" style="background:#BA72EF;width:80%">
+                                            <span style="float:right">E</span>
+                                            36 à 55
+                                        </div>
+                                        <div class="energy" style="background:#A74DEB;width:90%">
+                                            <span style="float:right">F</span>
+                                            56 à 80
+                                        </div>
+                                        <div class="energy" style="background:#8A19DF;width:100%">
+                                            <span style="float:right">G</span>
+                                            <= 81
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <label for="myForm_input_ges">Étiquette climat : Gaz à effet de serre</label>
+                                            <div class="input-group">
+                                                <div class="input-group-addon">GES</div>
+                                                <input type="number" class="form-control" id="myForm_input_ges" min="0">
+                                                <div class="input-group-addon">kg<inf>C02</inf>/m<sup>2</sup>.an</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                                    <a target="_blank" href="http://www.developpement-durable.gouv.fr/-Diagnostic-de-Performance,855-.html">
+                                        Plus d'information à propos du diagnostic de performances énergétiques sur Gouv.fr
+                                    </a>
+                                </div>
+                            </fieldset>
+
+                            <fieldset>
+                                <legend>Photos</legend>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <input type="file" dropzone multiple>
+                                </div>
+                                <div id="myForm_photosArea" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                </div>
+                            </fieldset>
+
+                            <fieldset>
+                                <legend>Description</legend>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <textarea rows="10" id="myForm_input_description">
+                Pourquoi votre bien est exceptionnel ?
+                                    </textarea>
+                                </div>
+                            </fieldset>
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <button type="submit" class="btn btn-primary" id="myForm_btn">Valider mon annonce</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
 
